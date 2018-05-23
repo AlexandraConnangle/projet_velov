@@ -1,0 +1,73 @@
+@media all and (max-width: 992px) {
+
+    .menu ul {
+        display: initial;
+        text-align: right;
+    }
+
+    #map-container {
+        flex-direction: column;
+    }
+
+    #panneau-container {
+        width: 100%;
+        padding: 10px;
+        margin: 0px auto 0px auto;
+    }
+
+    #panneau {
+        width: 100%;
+        text-align: center;
+    }
+
+    #map {
+        width: 100%;
+    }
+
+    #reservation-container {
+        margin: 0px auto 0px auto;
+    }
+}
+
+@media all and (max-device-width: 480px) {
+
+    .menu {
+        padding: 0px 0px 7px 0px;
+    }
+
+    #diaporama {
+        width: 280px;
+        height: 350px;
+        top: 315px;
+        margin-bottom: 180px;
+    }
+
+    #prev-button,
+    #next-button {
+        font-size: 3em;
+    }
+
+    #apli {
+        padding-top: 110px;
+        margin-top: -110px;
+        margin: auto;
+    }
+
+    #apli,
+    #reservation-container,
+    #reservation-confirmed {
+        width: 95%;
+    }
+
+    #apli-container {
+        padding: 10px;
+        width: 100%;
+        margin: auto;
+    }
+
+    #panneau-container {
+        width: auto;
+        padding: 10px;
+        margin: 0px auto 0px auto;
+    }
+}

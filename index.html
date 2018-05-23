@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style_responsive.css" />
+        <link rel="stylesheet" href="fonts/css/fontawesome-all.min.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Kanit:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+        
+        <meta name="description" content="Application de location de vélo sur la ville de Lyon">
+        <!-- Open Graph -->
+		<meta property="og:title" content="Velo'v"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="http://velov.alexandra-connangle.net/"/>
+		<meta property="og:image" content="http://velov.alexandra-connangle.net/images/diaporama/map.png"/>
+		<meta property="og:description" content="Velo'v : Reserver votre vélo sur la ville de Lyon"/>
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary"/>
+		<meta name="twitter:site" content="@velov"/>
+		<meta name="twitter:title" content="Velo'v"/>
+		<meta name="twitter:description" content="Velo'v : Reserver votre vélo sur la ville de Lyon"/>
+		<meta name="twitter:image" content="http://velov.alexandra-connangle.net/images/meta/velov.png"/>
+        
+        <title>Vélo'v</title>
+    </head>
+
+    <body id="top">
+        <div class="menu">
+            <a href="#home" id="logo">Vélo'v</a>
+            <nav>
+                <ul>
+                    <li><a href="#" data-scroll="top">Mode d'emploi</a></li>
+                    <li><a href="#" data-scroll="apli">Application</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="diaporama">
+            <div class="item">
+                <div class="item-content">
+                    <h2> Bienvenue sur Velo'v</h2>
+                    <p> Découvrez rapidement le fonctionnement de l'application en utilisant les boutons <i class="far fa-arrow-alt-circle-left"></i> <i class="far fa-arrow-alt-circle-right"></i> pour vous déplacer dans le manuel, sinon les flèches de votre clavier.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-content">
+                    <img src="images/diaporama/map.png" alt="Image de la map google" />
+                    <p>
+                        Faites glisser le plan sur votre zone de recherche.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-content">
+                    <img src="images/diaporama/marker.png" alt="Image d'un marker affichant le nom de la station au survol"/>
+                    <p>
+                        Selectionnez le marqueur correspondant à la station de votre choix.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-content">
+                    <img src="images/diaporama/station.png" alt="Exemple d'une station avec flèche indiquant l'emplacement des vélos disponibles"/>
+                    <p>
+                        Vérifiez le nombre de vélos disponibles puis cliquez sur "Réserver".
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-content">
+                    <img src="images/diaporama/canvas.png" alt="Exemple de validation de reservation avec signature" />
+                    <p>
+                        Laissez votre signature dans le carré blanc et cliquez sur valider pour enregistrer votre reservation.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-content">
+                    <img src="images/diaporama/reservation.png" alt="Exemple de reservation confirmée avec compteur de minutes" />
+                    <p>
+                        Une fois votre reservation validée, vous avez 20 min pour aller chercher votre vélo. Passé ce délais, la reservation sera annulée.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons-diaporama">
+            <a id="prev-button"><i class="far fa-arrow-alt-circle-left"></i></a>
+            <a id=next-button><i class="far fa-arrow-alt-circle-right"></i></a>
+        </div>
+
+        <div id="apli">
+            <div id="apli-container">
+                <div id="map-container">
+                    <div id="map"></div>
+                    <div id="panneau-container">
+                        <div id="panneau"></div>
+                        <span id="alert-bike"></span>
+                        <button id="button-reservation">Réserver</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="reservation-container">
+            <div id="reservation"></div>
+            <div id="sketch-canvas"></div>
+            <span id="alert-canvas" ></span>
+            <div class="buttons-canvas">
+                <button id="button-clear">Effacer</button>
+                <button id=button-save>Valider</button>
+            </div>
+        </div>
+
+        <script src="js/jquery/jquery-3.3.1.min.js"></script>
+        <script src="js/ajax/ajax.js"></script>
+        <script src="js/polyfill/polyfill_object_create.js"></script>
+        
+        <script src="js/objects/jc_decaux_api.js"></script>
+        <script src="js/objects/google_api.js"></script>
+        <script src="js/objects/markerclusterer.js"></script>
+        <script src="js/objects/web_storage.js"></script>
+        <script src="js/objects/reservation_manager.js"></script>
+        <script src="js/objects/velo_stations.js"></script>
+        <script src="js/objects/canvas.js"></script>
+        <script src="js/objects/diaporama.js"></script>
+        <script src="js/script.js"></script>
+        
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=*****&callback=initMap"></script>
+    </body>
+
+    <footer>
+        <div id="reservation-confirmed">
+            <div id="confirmation"></div>
+            <button id="button-reset">Annuler</button>
+        </div>
+    </footer>
+
+</html>
